@@ -1,7 +1,7 @@
-## Clase de Git, Github y CLI
+## Creación de una red social
 
 Readme:
-- Psuedocódigo
+- Pseudocódigo
 - Diagrama de flujo
 
-1. Estamos haciendo ejercicios sobre como usar la terminla y enlazar a Github.
+1. 
