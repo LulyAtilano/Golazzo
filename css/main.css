@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Paleta de colores */
+.purple {background-color: #852c85; }
+.light-purple { background-color: #F086EE }
+.dark-purple {background-color: #260C27; }
+.black {background-color: black; }
+.gray { background-color: #4D4D4D}
+.ligth-gray {background-color: #666666; }
+
+/* Navbar */
+nav.navbar {
+    border: 1px solid #852c85;
+    color: #852c85;
+}
+
+nav.navbar a.navbar-brand > img {
+    width: 50px;
+}
+
+/* Media Queries */
+@media (min-width: 576px) { ... }
+
+@media (min-width: 992px) { ... }
