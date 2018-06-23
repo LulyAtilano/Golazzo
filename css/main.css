@@ -12,7 +12,7 @@ body {
 .ligth-gray {background-color: #666666; }
 
 /* Navbar */
-nav.navbar {
+nav.navbar, .card-footer {
     border: 1px solid #852c85;
     color: #852c85;
 }
@@ -21,7 +21,18 @@ nav.navbar a.navbar-brand > img {
     width: 50px;
 }
 
-/* Media Queries */
-@media (min-width: 576px) { ... }
+i.far, i.fas  {
+    color: #852c85;
+}
 
-@media (min-width: 992px) { ... }
+/* Footer */
+footer div.card div.card-footer a.navbar-brand > img {
+    width: 40px;
+}
+
+.card-footer {
+    position: fixed;
+    bottom: 0;
+    padding: 6px 12px;
+    width: 100%;
+}
