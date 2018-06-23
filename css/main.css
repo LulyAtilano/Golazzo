@@ -25,6 +25,11 @@ i.far, i.fas  {
     color: #852c85;
 }
 
+#photo-login > img {
+    border-radius: 50%;
+    width: 3em;
+}
+
 /* Footer */
 footer div.card div.card-footer a.navbar-brand > img {
     width: 40px;
