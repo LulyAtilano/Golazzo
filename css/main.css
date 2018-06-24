@@ -26,9 +26,9 @@ i.far, i.fas, #user-name  {
     color: #852c85;
 }
 
-#photo-login > img {
+.photo-login > img {
     border-radius: 50%;
-    width: 3em;
+    width: 2em;
 }
 
 #user-name {

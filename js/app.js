@@ -6,8 +6,9 @@ $('#login-btn').click(function(){
         $('#login-btn').hide();
         console.log(result);
         saveUser(result.user);
-        $('#photo-login').append("<img src='"+result.user.photoURL+"' />");
+        $('.photo-login').append("<img src='"+result.user.photoURL+"' />");
         $('#user-name').append(result.user.displayName);
+        $('#logout-btn').removeClass(disabled);
     });
 }); 
 
@@ -28,6 +29,16 @@ firebase.database().ref("users").on("child_added", function(s){
     $('#root').append("<img src='"+user.photoURL+"' />");
 });*/
 
+/* Almacenar fotos */
+/*
+service firebase.storage {
+    match /b/{bucket}/o {
+      match /{allPaths=**} {
+        allow read, write: if request.auth != null;
+      }
+    }
+};
+*/
 
 /* Servidor */
 var config = {
