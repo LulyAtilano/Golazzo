@@ -39,7 +39,7 @@ $('#input-bm-File').change(function(e){
     storageRef.on("child_added", function(){
         $('#news-gral-users').append(file);
     });
-    
+
     var task = storageRef.put(file);
 });
 
