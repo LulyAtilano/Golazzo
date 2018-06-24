@@ -15,19 +15,45 @@ body {
 nav.navbar, .card-footer {
     border: 1px solid #852c85;
     color: #852c85;
+    font-size: 20px;
 }
 
 nav.navbar a.navbar-brand > img {
     width: 50px;
 }
 
-i.far, i.fas  {
+i.far, i.fas, #user-name  {
     color: #852c85;
 }
 
 #photo-login > img {
     border-radius: 50%;
     width: 3em;
+}
+
+#user-name {
+    font-size: 20px;
+    position: relative;
+    left: .4em;
+}
+
+/* Main */
+main div.row {
+    margin: 0;
+}
+
+#profile-user, #news-gral-users {
+    border: 1px solid blue;
+    content: "";
+    height: 30.5em;
+    padding: 0;
+}
+
+#news-users, #gral-info {
+    border: 1px solid red;
+    height: 30em;
+    margin: 0;
+    padding: 0 10px;
 }
 
 /* Footer */

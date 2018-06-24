@@ -4,11 +4,29 @@ var provider = new firebase.auth.GoogleAuthProvider();
 $('#login-btn').click(function(){
     firebase.auth().signInWithPopup(provider).then(function(result) {
         $('#login-btn').hide();
+        console.log(result);
+        saveUser(result.user);
         $('#photo-login').append("<img src='"+result.user.photoURL+"' />");
+        $('#user-name').append(result.user.displayName);
     });
 }); 
 
-/* Blog */
+
+/* Función para guardar la info de los usuarios */
+function saveUser(user) {
+    var userInfo = {
+        uid:user.uid,
+        name:user.displayName,
+        photo:user.photoURL,
+    }
+    firebase.database().ref("users/" + user.uid).set(userInfo);
+}
+
+/*
+firebase.database().ref("users").on("child_added", function(s){
+    var user = s.val();
+    $('#root').append("<img src='"+user.photoURL+"' />");
+});*/
 
 
 /* Servidor */
