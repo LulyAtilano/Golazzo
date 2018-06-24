@@ -31,18 +31,18 @@ $('#input-Upload-File').change(function(e){
     var task = storageRef.put(file);
 });
 
-/* Compartir bizcochos mundialistas */
+/* Subir bm's */
 $('#input-bm-File').change(function(e){
     var file = e.target.files[0];
-    var storageRef = firebase.storage().ref('images-bm/' + file.name);
+    var storageRef = firebase.storage().ref('images-bm/' + file.name)
+    
+    storageRef.on("child_added", function(){
+        $('#news-gral-users').append(file);
+    });
+    
     var task = storageRef.put(file);
 });
 
-$(document).ready(
-    $('.carousel').carousel({
-        interval: 2000
-    })
-);
 
 /* Servidor */
 var config = {
