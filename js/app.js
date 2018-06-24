@@ -23,22 +23,22 @@ function saveUser(user) {
     firebase.database().ref("users/" + user.uid).set(userInfo);
 }
 
-/*
-firebase.database().ref("users").on("child_added", function(s){
-    var user = s.val();
-    $('#root').append("<img src='"+user.photoURL+"' />");
-});*/
+/* Subir fotos */
+$('#upload-btn').click(function(){
+});
+
+/* Guardar fotos */
+$('#inputGroupFile03').change(function(){
+    var file = e.targer.files[0];
+    var storageRef = firebase.storage().ref('images/' + file.name);
+
+    storageRef.put(file);
+});
+
+/* firebase.database().ref() */
+
 
 /* Almacenar fotos */
-/*
-service firebase.storage {
-    match /b/{bucket}/o {
-      match /{allPaths=**} {
-        allow read, write: if request.auth != null;
-      }
-    }
-};
-*/
 
 /* Servidor */
 var config = {

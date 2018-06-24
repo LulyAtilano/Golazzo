@@ -59,6 +59,11 @@ main div.row {
     padding: 0 10px;
 }
 
+/* Subir fotos */
+div #profile-user div.input-group div.custom-file label.custom-file-label {
+    content: none;
+}
+
 /* Footer */
 footer div.card div.card-footer a.navbar-brand > img {
     width: 40px;
