@@ -1,9 +1,16 @@
-body {
+body{
     margin: 0;
     padding: 0;
    /* background-image: url(https://cdn.playbuzz.com/cdn/e772c91d-40fd-4c02-883f-7cf6f8c4d367/763c52ab-d5e7-46d7-8c1d-4ec45d2571e8.gif);*/
     background-repeat: no-repeat;
     background-size: cover;
+}
+#banner{
+	height: 400px;
+	width: 100%;
+	background-image: url(https://cdn.playbuzz.com/cdn/e772c91d-40fd-4c02-883f-7cf6f8c4d367/763c52ab-d5e7-46d7-8c1d-4ec45d2571e8.gif);
+	background-size: 100%;
+	background-position: 0 50%;
 }
 
 /* Paleta de colores */
