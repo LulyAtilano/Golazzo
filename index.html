@@ -54,13 +54,10 @@
                     <a id="login-btn" class="nav-link" href="#"> Iniciar Sesión</a>
                 </li>
                 <li class="nav-item">
-                    <div id="photo-login"></div>
+                    <div class="photo-login"></div>
                 </li>
-                <li class="nav-item dropdown">
-                    <span id="user-name"></span>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a id="logout-btn" class="dropdown-item" href="#"> Sign out </a>
-                    </div>
+                <li class="nav-item">
+                    <a id="logout-btn" class="dropdown-item disabled" href="#"> Sign out </a>
                 </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -74,12 +71,36 @@
              </header>
         <!-- Main -->
         <main> 
+<<<<<<< HEAD
             <div class="row">
                 <section id="profile-user" class="col-sm-3 col-md-2">
                     
                 </section>
                 <section id="news-gral-users" class="col-sm-9 col-md-10">
                     <div class="row"> 
+=======
+            <div class="row justify-content-md-center">
+                <section id="profile-user" class="border-primary col-sm-4 col-md-2">
+                    <div class="photo-login"> </div>
+                    <div class="card-body text-primary">
+                        <h5 id="user-name" class="card-title"></h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <!-- Input para subir archivos -->
+                    <div class="input-group mb-3">
+                        <span> ¡Comparte lo mejor del mundial! </span>
+                        <div class="input-group-prepend">
+                            <button id="upload-btn"class="btn btn-outline-secondary" type="button"> <i class="fas fa-upload"></i> </button>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile03">
+                            <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
+                        </div>
+                    </div>
+                </section>
+                <section id="news-gral-users" class="col-sm-8 col-md-10">
+                    <div class="row align-items-center"> 
+>>>>>>> 3411a8f8d37ae2c52a1ff06494abc82b6f433262
                         <section id="news-users" class="col-sm-12 col-md-6"></section>
                         <section id="gral-info" class="col-sm-12 col-md-6">
                                 <iframe src="https://calendar.google.com/calendar/embed?showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=400&amp;wkst=1&amp;bgcolor=%23cc66cc&amp;src=tg3dasc1hod7n41i7fe90oq6i4%40group.calendar.google.com&amp;color=%23875509&amp;ctz=America%2FMexico_City" style="border-width:0" width="430" height="430" frameborder="0" scrolling="no"></iframe>
