@@ -97,6 +97,9 @@ div #profile-user div.input-group div.custom-file progress#uploader {
 }
 
 /* Carrusel */
+.card{
+    height: 10em;
+}
 
 /* Footer */
 footer div.card div.card-footer a.navbar-brand > img {
