@@ -2,7 +2,11 @@
 $(function(){
     setTimeout(function() {
        $('#splash').fadeOut(500);
-    }, 2000);
+    }, 3000);
+    $('nav').removeClass("d-none");
+    $('header').removeClass("d-none");
+    $('main').removeClass("d-none");
+    $('footer').removeClass("d-none");
 });
 
 /* Log in */
@@ -54,11 +58,11 @@ $(document).ready(function() {
 });
 
 /*funcion para modal y ranking*/
-$('#myModal').on('shown.bs.modal', function () {
+/*$('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')
   })
 
-  $('.carousel').carousel()
+$('.carousel').carousel()*/
 
 
 

@@ -13,13 +13,13 @@
         
     </head>
     <body>
-          <div id="splash">
-              <center>
-                <img class="responsive-img" src="assets/images/golazzo.jpg">
-              </center>
-          </div>
+        <div id="splash">
+            <center>
+            <img class="responsive-img" src="assets/images/golazzo.jpg">
+            </center>
+        </div>
         <!-- Header -->
-        <nav class="navbar navbar-expand-sm navbar-light bg-white">
+        <nav class="navbar navbar-expand-sm navbar-light bg-white d-none">
             <a class="navbar-brand" href="index.html"> <img src="assets/images/golazzo.png" alt="logo golazzo"> </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -71,11 +71,11 @@
                 </form>
             </div>
         </nav>
-        <header class="row-fluid">
+        <header class="row-fluid d-none">
             <div id="banner"></div>
         </header>
         <!-- Main -->
-        <main> 
+        <main class="d-none"> 
             <div class="row"> 
                 <section id="profile-user" class="border-primary col-sm-4 col-md-2 disabled">
                     <div class="photo-login"> </div>
@@ -143,7 +143,7 @@
         
 
         <!-- Footer -->
-        <footer> 
+        <footer class="d-none"> 
             <div class="card text-center">
                 <div class="card-footer text-muted bg-white">
                     Golazzo
@@ -154,7 +154,8 @@
         
 
         <!-- Js Files -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
         <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
         <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>-->
         <script src="js/assets/bootstrap.min.js"></script>
