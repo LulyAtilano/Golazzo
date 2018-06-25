@@ -53,11 +53,11 @@ $(document).ready(function() {
 });
 
 /*funcion para modal y ranking*/
-$('#myModal').on('shown.bs.modal', function () {
+/*$('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')
   })
 
-  $('.carousel').carousel()
+  $('.carousel').carousel()*/
 
 
 
