@@ -1,3 +1,10 @@
+/*FUNCION SPLASH*/
+$(function(){
+    setTimeout(function() {
+       $('#splash').fadeOut(500);
+    }, 2000);
+});
+
 /* Log in */
 var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -8,6 +15,7 @@ $('#login-btn').click(function(){
         saveUser(result.user);
         $('.photo-login').append("<img src='"+result.user.photoURL+"' />");
         $('#user-name').append(result.user.displayName);
+        $('#logout-btn').removeClass("d-none");
         $('#logout-btn').removeClass("disabled");
         $('#profile-user').removeClass("disabled");
     });
