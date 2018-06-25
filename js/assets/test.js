@@ -1,10 +1,3 @@
-/*FUNCION SPLASH*/
-$(function(){
-    setTimeout(function() {
-       $('#splash').fadeOut(500);
-    }, 2000);
- });
-
 /* Log in */
 var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -20,7 +13,6 @@ $('#login-btn').click(function(){
     });
 }); 
 
-
 /* Función para guardar la info de los usuarios */
 function saveUser(user) {
     var userInfo = {
@@ -32,36 +24,40 @@ function saveUser(user) {
 }
 
 /* Subir archivos grales */
+
 $('#input-Upload-File').change(function(e){
     var file = e.target.files[0];
-    var storageRef = firebase.storage().ref('images/' + file.name);
-    var task = storageRef.put(file);
+    var storageRef = firebase.storage().ref('images/' + file.name).put(file);
 });
 
 /* Subir bm's */
+/*
+window.onload = iniciliazar;
+var fichero;
+var storageRef;
+
+function iniciliazar(){
+    fichero = document.getElementById('input-bm-File');
+    fichero.addEventListener("change", subirImagenAFirebase, false);
+
+    storageRef = firebase.storage().ref();
+}
+
+function subirImagenAFirebase(){
+    var imagenASubir = fichero.files[0].name;
+
+    var uploadTask = storageRef.child('img/' + imagenASubir.name).put(imagenASubir);
+}*/
+
 $('#input-bm-File').change(function(e){
     var file = e.target.files[0];
-    var storageRef = firebase.storage().ref('images-bm/'+file.name).put(file);
-    var pathReference = firebase.database().ref().child('img-bm/'+file.name);
+    var storageRef = firebase.storage().ref('images-bm/' + file.name).child().put(file);
     
-    /*$('#news-users').append("<img src='"+file+"' />");
-    $('#news-users').append("<img src ='"+storageRef+"'/>");*/
+    /*storageRef.on("child_added", function(){
+        $('#news-gral-users').append(file);
+    });*/
 });
 
-$(document).ready(function() {
-    $('.carousel').carousel('pause');
-});
-
-/*funcion para modal y ranking*/
-$('#myModal').on('shown.bs.modal', function () {
-    $('#myInput').trigger('focus')
-  })
-
-  $('.carousel').carousel()
-
-
-
-/* Servidor */
 var config = {
     apiKey: "AIzaSyCQmJhU4rGSzM9eER5wWKYbHqXNFC1YHSQ",
     authDomain: "golazzo-472c0.firebaseapp.com",
@@ -72,4 +68,3 @@ var config = {
 };
 
 firebase.initializeApp(config);
-
