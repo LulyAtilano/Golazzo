@@ -26,6 +26,10 @@ body {
     z-index: 100;
 }
 
+.hide-start {
+    display: none;
+}
+
 /* Navbar */
 nav.navbar, .card-footer {
     border: 1px solid #852c85;
@@ -47,7 +51,7 @@ i.far, i.fas, #user-name  {
 }
 
 #user-name {
-    font-size: 20px;
+    font-size: 30px;
     position: relative;
     left: .4em;
 }
@@ -65,11 +69,13 @@ main div.row {
 
 #profile-user {
     height: auto;
+    padding-left: 15px;
 }
+
 #news-users, #gral-info {
     min-height: 15em;
     margin: 0;
-    padding: 0 10px;
+    padding: 15px 10px;
 }
 
 #profile-user {
@@ -78,9 +84,17 @@ main div.row {
     flex-direction: column;
 }
 
+#news-gral-users div.row div.photo-login > img {
+    width: 3em;
+}
+
 #news-gral-users div.row section#gral-info iframe {
     width: 90%;
     padding-left: 8.99%;
+}
+
+#news-gral-users div.row section#gral-info div#carouselExampleControls {
+    margin-bottom: 100px;
 }
 
 /* Subir fotos */
@@ -104,7 +118,11 @@ div #profile-user div.input-group div.custom-file progress#uploader {
 }
 
 /* Footer */
-footer div.card div.card-footer a.navbar-brand > img {
+footer div.card-footer {
+    height: auto;
+}
+
+footer div div.card-footer a.navbar-brand > img {
     width: 40px;
 }
 
@@ -115,14 +133,6 @@ footer div.card div.card-footer a.navbar-brand > img {
     width: 99.8%;
 }
 /* Comentarios */
-#news-users {
-    border: 1px solid green;
-}
-
-#gral-info {
-    border: 1px solid purple;
-}
-
 #profile-user section.texto div.card-body > textarea {
     width: 100%;
 }
@@ -131,8 +141,7 @@ footer div.card div.card-footer a.navbar-brand > img {
     width: 100%;
 }
 
-#news-area div#goals { 
-    border: 1px solid blue;
+#news-area div#goals {
     padding:0;
 }
 

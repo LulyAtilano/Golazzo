@@ -16,6 +16,7 @@ $(function(){
        $('#splash').fadeOut(500);
     }, 3000);
     $('.d-none').removeClass("d-none");
+    $('.hide-start').removeClass("hide-start");
 });
 
 /* Log in */
