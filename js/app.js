@@ -15,10 +15,7 @@ $(function(){
     setTimeout(function() {
        $('#splash').fadeOut(500);
     }, 3000);
-    $('nav').removeClass("d-none");
-    $('header').removeClass("d-none");
-    $('main').removeClass("d-none");
-    $('footer').removeClass("d-none");
+    $('.d-none').removeClass("d-none");
 });
 
 /* Log in */
@@ -32,16 +29,17 @@ $('#login-btn').click(function () {
         $('.photo-login').append("<img src='" + result.user.photoURL + "' />");
         $('#user-name').append(result.user.displayName);
         //$('#user-name').append(result.user.displayName);
-        $('#logout-btn').removeClass("d-none");
+        //$('#logout-btn').removeClass("d-none");
         $('#logout-btn').removeClass("disabled");
         $('#profile-user').removeClass("disabled");
     });
 });
 
+var userInfo = {};
 
 /* Función para guardar la info de los usuarios */
 function saveUser(user) {
-    var userInfo = {
+    userInfo = {
         uid: user.uid,
         name: user.displayName,
         photo: user.photoURL,
@@ -80,20 +78,22 @@ $("#commit").click(function () {
 var template = '<section class="texto text-center">' +
                     '<div class="card w-100">' +
                         '<div class="card-body">' +
-                            '<h4> _UserName_</h4>' +
-                            '<textarea name="textArea" id="textArea"rows="2" class="Text card-text">__commit__</textarea>'+
+                            '<h5 class="float-left"> _UserName_</h5>' +
+                            '<div id="comment-user">'+
+                            '<img src="_Photo-User__"/>'+'<textarea name="textArea" id="textArea" class="Text card-text col-sm-10">__commit__</textarea>'+
+                            '</div>'+
                         '</div>'+
                     '</div>'+
                 '</section>';
 
 function addCommit(comment) {
     var finalTemplate = "";
-    /*finalTemplate = template.replace(" _UserName_", );*/
-    finalTemplate = template.replace("__commit__", comment);
+    console.log(userInfo.name);
+    finalTemplate = template.replace(" _UserName_",userInfo.name + " dice: ")
+    .replace("_Photo-User__", userInfo.photo)
+    .replace("__commit__", comment);
     $("#goals").append(finalTemplate);
 };
-
-/* $("main").append(finalTemplate);*/
 
 
 

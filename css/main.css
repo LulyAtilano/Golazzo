@@ -67,7 +67,7 @@ main div.row {
     height: auto;
 }
 #news-users, #gral-info {
-    height: auto;
+    min-height: 15em;
     margin: 0;
     padding: 0 10px;
 }
@@ -127,6 +127,31 @@ footer div.card div.card-footer a.navbar-brand > img {
     width: 100%;
 }
 
-#news-area { 
+#textArea {
+    width: 100%;
+}
+
+#news-area div#goals { 
     border: 1px solid blue;
+    padding:0;
+}
+
+div#goals {
+    padding: 0;
+}
+
+/* Comentarios al blog */
+#goals > section {
+    position: relative;
+    margin-top: .5em;
+}
+
+#news-gral-users div #news-users #goals section div div div#comment-user {
+    display: inline-flex;
+    width: 100%;
+}
+
+#news-gral-users div #news-users #goals section div div > img {
+    height: 3em;
+    border-radius: 40%;
 }
