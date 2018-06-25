@@ -1,3 +1,10 @@
+/*FUNCION SPLASH*/
+$(function(){
+    setTimeout(function() {
+       $('#splash').fadeOut(500);
+    }, 2000);
+ });
+
 /* Log in */
 var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -45,6 +52,14 @@ $(document).ready(function() {
     $('.carousel').carousel('pause');
 });
 
+/*funcion para modal y ranking*/
+$('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  })
+
+  $('.carousel').carousel()
+
+
 
 /* Servidor */
 var config = {
@@ -57,3 +72,4 @@ var config = {
 };
 
 firebase.initializeApp(config);
+
