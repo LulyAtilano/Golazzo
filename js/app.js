@@ -1,3 +1,10 @@
+/*FUNCION SPLASH*/
+$(function(){
+    setTimeout(function() {
+       $('#splash').fadeOut(500);
+    }, 2000);
+ });
+
 /* Log in */
 var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -8,7 +15,8 @@ $('#login-btn').click(function(){
         saveUser(result.user);
         $('.photo-login').append("<img src='"+result.user.photoURL+"' />");
         $('#user-name').append(result.user.displayName);
-        $('#logout-btn').removeClass(disabled);
+        $('#logout-btn').removeClass("disabled");
+        $('#profile-user').removeClass("disabled");
     });
 }); 
 
@@ -23,22 +31,33 @@ function saveUser(user) {
     firebase.database().ref("users/" + user.uid).set(userInfo);
 }
 
-/* Subir fotos */
-$('#upload-btn').click(function(){
-});
-
-/* Guardar fotos */
-$('#inputGroupFile03').change(function(){
-    var file = e.targer.files[0];
+/* Subir archivos grales */
+$('#input-Upload-File').change(function(e){
+    var file = e.target.files[0];
     var storageRef = firebase.storage().ref('images/' + file.name);
-
-    storageRef.put(file);
+    var task = storageRef.put(file);
 });
 
-/* firebase.database().ref() */
+/* Subir bm's */
+$('#input-bm-File').change(function(e){
+    var file = e.target.files[0];
+    var storageRef = firebase.storage().ref('images-bm/' + file.name)
+    
+    storageRef.on("child_added", function(){
+        $('#news-gral-users').append(file);
+    });
+
+    var task = storageRef.put(file);
+});
+
+/*funcion para modal y ranking*/
+$('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  })
+
+  $('.carousel').carousel()
 
 
-/* Almacenar fotos */
 
 /* Servidor */
 var config = {
@@ -46,7 +65,7 @@ var config = {
     authDomain: "golazzo-472c0.firebaseapp.com",
     databaseURL: "https://golazzo-472c0.firebaseio.com",
     projectId: "golazzo-472c0",
-    storageBucket: "",
+    storageBucket: "golazzo-472c0.appspot.com",
     messagingSenderId: "717601290131"
 };
 
