@@ -52,12 +52,39 @@ $(document).ready(function() {
     $('.carousel').carousel('pause');
 });
 
+/*creando seccion de comentarios*/
+
+function getCommit() {
+    var commit = $("#textarea").val();
+  //  console.log(coment);
+ addCommit(textArea);
+
+ $("#textArea").val('');
+
+}
+var template = '<section class="texto text-center">'+
+'<div class="card w-100">'+
+        '<div class="card-body">'+
+          '<h4 class="card-title">Baja el balon</h4>'+
+          '<textarea name="textArea" id="textArea" cols="100" rows="2" class="Text card-text">Mandanos un pase!</textarea>'+
+          '<a href="#" class="btn btn-primary">Gol!</a>';
+
+          function addCommit(commit) {
+      
+            var finalTemplate = "";
+            finalTemplate = template.replace("__commit__", commit);
+                
+        
+                $("main").append(finalTemplate);
+        
+               
 /*funcion para modal y ranking*/
 /*$('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')
   })
 
   $('.carousel').carousel()*/
+  
 
 
 
@@ -72,4 +99,3 @@ var config = {
 };
 
 firebase.initializeApp(config);
-
