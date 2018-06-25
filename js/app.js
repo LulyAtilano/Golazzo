@@ -11,9 +11,9 @@ var config = {
 firebase.initializeApp(config);
 
 /*FUNCION SPLASH*/
-$(function(){
-    setTimeout(function() {
-       $('#splash').fadeOut(500);
+$(function () {
+    setTimeout(function () {
+        $('#splash').fadeOut(500);
     }, 3000);
     $('nav').removeClass("d-none");
     $('header').removeClass("d-none");
@@ -68,23 +68,40 @@ $('#input-bm-File').change(function (e) {
 
 $('.carousel').carousel('pause');
 
+/*rating*/
+$(document).ready(function () {
+    $("#btn3").click(function () {
+        $("#button-3").append('<li id="btn-3"><i class="fas fa-heartbeat --indigo"></i></li>');
+    });
+    $("#btn4").click(function () {
+        $("#button-4").append('<li id="btn-4"><i class="fas fa-heartbeat --indigo"></i></li>');
+    });
+    $("#btn5").click(function () {
+        $("#button-5").append('<li id="btn-5"><i class="fas fa-heartbeat --indigo"></i></li>');
+    });
+    $("#btn6").click(function () {
+        $("#button-6").append('<li id="btn-6"><i class="fas fa-heartbeat --indigo"></i></li>');
+    });
+});
+
+
 /*creando seccion de comentarios*/
 $("#commit").click(function () {
-        var commit = $("#textArea").val();
-        //console.log(commit);
-        addCommit(commit);
+    var commit = $("#textArea").val();
+    //console.log(commit);
+    addCommit(commit);
 
     $("#textArea").val('');
 });
 
 var template = '<section class="texto text-center">' +
-                    '<div class="card w-100">' +
-                        '<div class="card-body">' +
-                            '<h4> _UserName_</h4>' +
-                            '<textarea name="textArea" id="textArea"rows="2" class="Text card-text">__commit__</textarea>'+
-                        '</div>'+
-                    '</div>'+
-                '</section>';
+    '<div class="card w-100">' +
+    '<div class="card-body">' +
+    '<h4> _UserName_</h4>' +
+    '<textarea name="textArea" id="textArea"rows="2" class="Text card-text">__commit__</textarea>' +
+    '</div>' +
+    '</div>' +
+    '</section>';
 
 function addCommit(comment) {
     var finalTemplate = "";
@@ -97,4 +114,4 @@ function addCommit(comment) {
 
 
 
-       
+

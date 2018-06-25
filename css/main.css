@@ -103,6 +103,23 @@ div #profile-user div.input-group div.custom-file progress#uploader {
     height: 10em;
 }
 
+/*ranking*/
+.row-bms{
+    border:2px dotted #852c85;
+    height: 5em;
+    padding: 1em;
+    width: 100%;
+}
+#btn3, #btn4, #btn5, #btn6{
+    background-color: #852c85;
+}
+#btn-3, #btn-4, #btn-5, #btn-6 {
+    padding: 0;
+    display: inline;
+    text-decoration: none;
+    margin: 0.2em;
+}
+
 /* Footer */
 footer div.card div.card-footer a.navbar-brand > img {
     width: 40px;
