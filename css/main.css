@@ -51,14 +51,12 @@ main div.row {
 }
 
 #profile-user, #news-gral-users {
-    border: 1px solid blue;
     content: "";
     height: 30.5em;
     padding: 0;
 }
 
 #news-users, #gral-info {
-    border: 1px solid red;
     height: 30em;
     margin: 0;
     padding: 0 10px;
@@ -92,9 +90,6 @@ div #profile-user div.input-group div.custom-file progress#uploader {
 }
 
 /* Carrusel */
-.carousel-item {
-    border: 1px solid green;
-}
 
 /* Footer */
 footer div.card div.card-footer a.navbar-brand > img {
