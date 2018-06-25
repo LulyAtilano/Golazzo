@@ -1,3 +1,15 @@
+/* Servidor */
+var config = {
+    apiKey: "AIzaSyCQmJhU4rGSzM9eER5wWKYbHqXNFC1YHSQ",
+    authDomain: "golazzo-472c0.firebaseapp.com",
+    databaseURL: "https://golazzo-472c0.firebaseio.com",
+    projectId: "golazzo-472c0",
+    storageBucket: "golazzo-472c0.appspot.com",
+    messagingSenderId: "717601290131"
+};
+
+firebase.initializeApp(config);
+
 /*FUNCION SPLASH*/
 $(function(){
     setTimeout(function() {
@@ -7,7 +19,6 @@ $(function(){
     $('header').removeClass("d-none");
     $('main').removeClass("d-none");
     $('footer').removeClass("d-none");
-
 });
 
 /* Log in */
@@ -20,6 +31,7 @@ $('#login-btn').click(function () {
         saveUser(result.user);
         $('.photo-login').append("<img src='" + result.user.photoURL + "' />");
         $('#user-name').append(result.user.displayName);
+        //$('#user-name').append(result.user.displayName);
         $('#logout-btn').removeClass("d-none");
         $('#logout-btn').removeClass("disabled");
         $('#profile-user').removeClass("disabled");
@@ -54,65 +66,35 @@ $('#input-bm-File').change(function (e) {
     $('#news-users').append("<img src ='"+storageRef+"'/>");*/
 });
 
-$(document).ready(function () {
-    $('.carousel').carousel('pause');
-});
+$('.carousel').carousel('pause');
 
 /*creando seccion de comentarios*/
+$("#commit").click(function () {
+        var commit = $("#textArea").val();
+        //console.log(commit);
+        addCommit(commit);
 
-/*$(document).ready(function () {
-    $("#commit").click(function () {
-        function getCommit() {
-            var commit = $("#textArea").val();
-            //  console.log(coment);
-            addCommit(textArea);
+    $("#textArea").val('');
+});
 
-            $("#textArea").val('');
+var template = '<section class="texto text-center">' +
+                    '<div class="card w-100">' +
+                        '<div class="card-body">' +
+                            '<h4> _UserName_</h4>' +
+                            '<textarea name="textArea" id="textArea"rows="2" class="Text card-text">__commit__</textarea>'+
+                        '</div>'+
+                    '</div>'+
+                '</section>';
 
-        }
-        var template = '<section class="texto text-center">' +
-            '<div class="card w-100">' +
-            '<div class="card-body">' +
-            '<h4 class="card-title">Baja el balon</h4>' +
-            '<textarea name="textArea" id="textArea" cols="100" rows="2" class="Text card-text">Mandanos un pase!</textarea>' +
-            '<a href="#" class="btn btn-primary">Gol!</a>';
+function addCommit(comment) {
+    var finalTemplate = "";
+    /*finalTemplate = template.replace(" _UserName_", );*/
+    finalTemplate = template.replace("__commit__", comment);
+    $("#goals").append(finalTemplate);
+};
 
-        function addCommit(commit) {
-
-            var finalTemplate = "";
-            finalTemplate = template.replace("__commit__", commit);
-            $("#goals").append(finalTemplate);
-        };
-*/
-
-
-        /* $("main").append(finalTemplate);*/
-
-
-        /*funcion para modal y ranking*/
-        /*$('#myModal').on('shown.bs.modal', function () {
-            $('#myInput').trigger('focus')
-          })
-        
-          $('.carousel').carousel()*/
-
-/*funcion para modal y ranking*/
-/*$('#myModal').on('shown.bs.modal', function () {
-    $('#myInput').trigger('focus')
-  })
-
-$('.carousel').carousel()*/
+/* $("main").append(finalTemplate);*/
 
 
 
-        /* Servidor */
-        var config = {
-            apiKey: "AIzaSyCQmJhU4rGSzM9eER5wWKYbHqXNFC1YHSQ",
-            authDomain: "golazzo-472c0.firebaseapp.com",
-            databaseURL: "https://golazzo-472c0.firebaseio.com",
-            projectId: "golazzo-472c0",
-            storageBucket: "golazzo-472c0.appspot.com",
-            messagingSenderId: "717601290131"
-        };
-
-        firebase.initializeApp(config);
+       

@@ -59,10 +59,13 @@ main div.row {
 
 #profile-user, #news-gral-users {
     content: "";
-    max-height: 30.5em;
+    height: 30.5em;
     padding: 0;
 }
 
+#profile-user {
+    height: auto;
+}
 #news-users, #gral-info {
     height: auto;
     margin: 0;
@@ -79,7 +82,6 @@ main div.row {
     width: 90%;
     padding-left: 8.99%;
 }
-
 
 /* Subir fotos */
 .input-group.mb-3 {
@@ -111,4 +113,20 @@ footer div.card div.card-footer a.navbar-brand > img {
     bottom: 0;
     padding: 6px 12px;
     width: 99.8%;
+}
+/* Comentarios */
+#news-users {
+    border: 1px solid green;
+}
+
+#gral-info {
+    border: 1px solid purple;
+}
+
+#profile-user section.texto div.card-body > textarea {
+    width: 100%;
+}
+
+#news-area { 
+    border: 1px solid blue;
 }

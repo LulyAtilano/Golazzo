@@ -103,12 +103,26 @@
                             <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
                         </div>
                     </div>
+                    <!--tarjeta para los comentarios--> 
+                    <section class="texto text-center">
+                        <div class="card w-100">
+                            <div class="card-body">
+                                <h4 class="card-title">Baja el balon</h4>
+                                <textarea name="Text card-text" id="textArea" rows="2" class="validate" placeholder="Mándanos un pase!"></textarea>
+                                <a id="commit" href="#!" class="btn btn-primary">Gol!</a>
+                            </div>
+                        </div>
+                    </section>
                 </section>
                 <section id="news-gral-users" class="col-sm-8 col-md-10">
-                    <div class="row align-items-center"> 
+                    <div class="row"> 
                         <section id="news-users" class="col-sm-12 col-md-6">
-                            <!-- Sección bm's-->
+                            <div id="goals" class="col-12"></div>
+                        </section>
+                        <section id="gral-info" class="col-sm-12 col-md-6">
+                            <iframe src="https://calendar.google.com/calendar/embed?showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=400&amp;wkst=1&amp;bgcolor=%23cc66cc&amp;src=tg3dasc1hod7n41i7fe90oq6i4%40group.calendar.google.com&amp;color=%23875509&amp;ctz=America%2FMexico_City" style="border-width:0" width="550" height="300" frameborder="0" scrolling="no"></iframe>
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <!-- Sección bm's-->
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <img class="d-block w-100" src="assets/images/Griezmann-fra.jpg" alt="Antoine Griezmann">
@@ -133,29 +147,15 @@
                                 </a>
                             </div>
                         </section>
-                        <section id="gral-info" class="col-sm-12 col-md-6">
-                            <iframe src="https://calendar.google.com/calendar/embed?showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=400&amp;wkst=1&amp;bgcolor=%23cc66cc&amp;src=tg3dasc1hod7n41i7fe90oq6i4%40group.calendar.google.com&amp;color=%23875509&amp;ctz=America%2FMexico_City" style="border-width:0" width="550" height="300" frameborder="0" scrolling="no"></iframe>
-                        </section>
                     </div>
                 </section>
-            </div>
-            <!--tarjeta para los comentarios-->
-            <section class="texto text-center">
-        <div class="card w-100">
-                <div class="card-body">
-                  <h4 class="card-title">Baja el balon</h4>
-                  <textarea name="Text card-text" id="textArea" cols="100" rows="2" class="validate">Mandanos un pase!</textarea>
-                  <a id="commit" href="#!" class="btn btn-primary">Gol!</a>
-                </div>
-              </div>
-            </section>
-            <section></section>
+            </div> 
         </main>
         
 
         <!-- Footer -->
         <footer class="d-none"> 
-            <div class="card text-center">
+            <div class="card text-center d-none">
                 <div class="card-footer text-muted bg-white">
                     Golazzo
                     <a class="navbar-brand" href="index.html"> <img src="assets/images/golazzo.png" alt="logo golazzo"> </a>
@@ -165,8 +165,7 @@
         
 
         <!-- Js Files -->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-       crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
         <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
         <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>-->
