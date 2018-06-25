@@ -1,8 +1,13 @@
 /*FUNCION SPLASH*/
-$(function () {
-    setTimeout(function () {
-        $('#splash').fadeOut(500);
-    }, 2000);
+$(function(){
+    setTimeout(function() {
+       $('#splash').fadeOut(500);
+    }, 3000);
+    $('nav').removeClass("d-none");
+    $('header').removeClass("d-none");
+    $('main').removeClass("d-none");
+    $('footer').removeClass("d-none");
+
 });
 
 /* Log in */
@@ -15,6 +20,7 @@ $('#login-btn').click(function () {
         saveUser(result.user);
         $('.photo-login').append("<img src='" + result.user.photoURL + "' />");
         $('#user-name').append(result.user.displayName);
+        $('#logout-btn').removeClass("d-none");
         $('#logout-btn').removeClass("disabled");
         $('#profile-user').removeClass("disabled");
     });
@@ -90,6 +96,12 @@ $(document).ready(function () {
         
           $('.carousel').carousel()*/
 
+/*funcion para modal y ranking*/
+/*$('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  })
+
+$('.carousel').carousel()*/
 
 
 
