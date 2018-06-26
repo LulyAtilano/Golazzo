@@ -56,16 +56,32 @@ $('#input-Upload-File').change(function (e) {
     //console.log(firebase.storage().ref('images/').bucket);
     //console.log(file.name);
 
+    /* Se refleja el archivo guardado de Firebase a la sección goals */
     storageRef.getDownloadURL().then(function(url){
-        $('#goals').append('<img src="'+ url+'"/>');
+        $('#goals').append('<section class="texto text-center img-user-share">' +
+                    '<div class="card w-100">' +
+                        '<div class="card-body" style="padding-top:5px;padding-bottom:5px;">' +
+                            '<img style="width:150px; height: 150px;" src="'+ url +'" width: 150px;/>'+
+                        '</div>'+
+                    '</div>'+
+                '</section>');
+    //('<div>'+'<img src="'+ url+'"/>'+'</div>');
     });
 });
 
 /* Subir bm's */
 $('#input-bm-File').change(function (e) {
     var file = e.target.files[0];
-    var storageRef = firebase.storage().ref('images-bm/' + file.name).put(file);
-    var pathReference = firebase.database().ref().child('img-bm/' + file.name);
+    var storageRef = firebase.storage().ref('images-bm/' + file.name);
+    var task = storageRef.put(file);
+
+    /* Se refleja el archivo guardado de Firebase a la sección de carrusel */
+    storageRef.getDownloadURL().then(function(url){
+        $('#img-carousel').append('<div class="carousel-item">'+
+            '<img style="width:150px; height: 150px;" class="d-block" src="'+ url +'"/>'+
+          '</div>');
+        //'<img src="'+ url+'"/>'
+    });
 });
 
 $('.carousel').carousel('pause');
@@ -92,7 +108,7 @@ var template = '<section class="texto text-center">' +
 
 function addCommit(comment) {
     var finalTemplate = "";
-    console.log(userInfo.name);
+    //console.log(userInfo.name);
     finalTemplate = template.replace(" _UserName_",userInfo.name + " dice: ")
     .replace("_Photo-User__", userInfo.photo)
     .replace("__commit__", comment);
