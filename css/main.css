@@ -15,7 +15,7 @@ body {
 /* Paleta de colores */
 .purple {background-color: #852c85; }
 .light-purple { background-color: #F086EE }
-.dark-purple {background-color: #260C27; }
+.dark-purple {color: #260C27; }
 .black {background-color: black; }
 .gray { background-color: #4D4D4D}
 .ligth-gray {background-color: #666666; }
@@ -78,14 +78,19 @@ main div.row {
     padding: 15px 10px;
 }
 
+#gral-info {
+    margin-bottom: 45px;
+}
+
 #profile-user {
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-#news-gral-users div.row div.photo-login > img {
-    width: 3em;
+main div.row section#profile-user div.card-body div.photo-login > img {
+    width: 6em;
+    margin-left: 18%; 
 }
 
 #news-gral-users div.row section#gral-info iframe {
@@ -94,7 +99,11 @@ main div.row {
 }
 
 #news-gral-users div.row section#gral-info div#carouselExampleControls {
-    margin-bottom: 100px;
+    margin-bottom: 10px;
+}
+
+.carousel-item{
+    height: 243px;
 }
 
 /* Subir fotos */
@@ -143,6 +152,7 @@ footer div div.card-footer a.navbar-brand > img {
 
 #news-area div#goals {
     padding:0;
+    border: 1px solid blue;
 }
 
 div#goals {
@@ -163,4 +173,23 @@ div#goals {
 #news-gral-users div #news-users #goals section div div > img {
     height: 3em;
     border-radius: 40%;
+}
+
+/* Ranking */
+#ranking-container > h5 {
+    margin-bottom: 18px;
+}
+
+#ranking-container div.row-bms > ul {
+    display: inline-flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+#ranking-container div.row-bms ul > button {
+    margin-right: 15px;
+}
+
+#ranking-container div.row-bms ul li > i {
+    margin-right: 5px;
 }

@@ -78,7 +78,7 @@ $('#input-bm-File').change(function (e) {
     /* Se refleja el archivo guardado de Firebase a la sección de carrusel */
     storageRef.getDownloadURL().then(function(url){
         $('#img-carousel').append('<div class="carousel-item">'+
-            '<img style="width:150px; height: 150px;" class="d-block" src="'+ url +'"/>'+
+            '<img style="width:100%; height: 243px;" class="d-block w-100" src="'+ url +'"/>'+
           '</div>');
         //'<img src="'+ url+'"/>'
     });
@@ -115,6 +115,23 @@ function addCommit(comment) {
     $("#goals").append(finalTemplate);
 };
 
+/* Ranking */
+$(document).ready(function(){
+    $("#btn3").click(function(){
+        $("#li-btn-3").append('<i class="fas fa-heartbeat --indigo"></i>');
+    });
 
+    $("#btn4").click(function(){
+        $("#li-btn-4").append('<i class="fas fa-heartbeat --indigo"></i>');
+    });
+
+    $("#btn5").click(function(){
+        $("#li-btn-5").append('<i class="fas fa-heartbeat --indigo"></i>');
+    });
+
+    $("#btn6").click(function(){
+        $("#li-btn-6").append('<i class="fas fa-heartbeat --indigo"></i>');
+    });
+});
 
        
