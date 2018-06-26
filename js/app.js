@@ -53,10 +53,12 @@ $('#input-Upload-File').change(function (e) {
     var file = e.target.files[0];
     var storageRef = firebase.storage().ref('images/' + file.name);
     var task = storageRef.put(file);
+    //console.log(firebase.storage().ref('images/').bucket);
+    //console.log(file.name);
 
-    var imgInput = storageRef.location.path;
-    $('#goals').append('<img src="https://console.firebase.google.com/project/golazzo-472c0/storage/golazzo-472c0.appspot.com/"' +imgInput+' />');
-    //console.log(imgInput);
+    storageRef.getDownloadURL().then(function(url){
+        $('#goals').append('<img src="'+ url+'"/>');
+    });
 });
 
 /* Subir bm's */
