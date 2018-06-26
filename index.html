@@ -1,36 +1,30 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Red Social </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Css Files -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-        crossorigin="anonymous">
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">-->
-    <link rel="stylesheet" type="text/css" media="screen" href="css/assets/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-
-</head>
-
-<body>
-    <div id="splash">
-        <center>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Red Social </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Css Files -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">-->
+        <link rel="stylesheet" type="text/css" media="screen" href="css/assets/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    </head>
+    <body>
+        <div id="splash" class="d-none">
+            <center>
             <img class="responsive-img" src="assets/images/golazzo.jpg">
-        </center>
-    </div>
-    <!-- Header -->
-    <nav class="navbar navbar-expand-sm navbar-light bg-white d-none">
-        <a class="navbar-brand" href="index.html">
-            <img src="assets/images/golazzo.png" alt="logo golazzo"> </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto align-items-center">
+            </center>
+        </div>
+        <!-- Header -->
+        <nav class="navbar navbar-expand-sm navbar-light bg-white d-none hide-start">
+            <a class="navbar-brand" href="index.html"> <img src="assets/images/golazzo.png" alt="logo golazzo"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto align-items-center">
                 <li class="nav-item active">
                     <a class="nav-link" href="index.html"> Inicio
                         <span class="sr-only">(current)</span>
@@ -43,14 +37,12 @@
                         <i class="far fa-calendar-alt"></i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="https://www.google.com.mx/search?q=rusia+2018+octavos+de+final&oq=rusia+2018+octav&aqs=chrome.2.69i57j0l5.10236j0j7&sourceid=chrome&ie=UTF-8#sie=lg;/m/06qjc4;2;/m/030q7;mt;fp;1">
-                        Fase regular </a>
-                        <a class="dropdown-item" href="#"> 8vos de final </a>
-                        <a class="dropdown-item" href="#"> 4tos de final </a>
-                        <a class="dropdown-item" href="#"> Semifinal </a>
-                        <a class="dropdown-item" href="#"> 3er / 4to lugar </a>
-                        <a class="dropdown-item" href="#"> Final </a>
-
+                        <a class="dropdown-item" href="https://www.google.com.mx/search?q=rusia+2018+octavos+de+final&oq=rusia+2018+octav&aqs=chrome.2.69i57j0l5.10236j0j7&sourceid=chrome&ie=UTF-8#sie=lg;/m/06qjc4;2;/m/030q7;mt;fp;1"> Fase regular </a>
+                        <a class="dropdown-item" href="#iframe-calendar"> 8vos de final </a>
+                        <a class="dropdown-item" href="#iframe-calendar"> 4tos de final </a>
+                        <a class="dropdown-item" href="#iframe-calendar"> Semifinal </a>
+                        <a class="dropdown-item" href="#iframe-calendar"> 3er / 4to lugar </a>
+                      <a class="dropdown-item" href="#iframe-calendar"> Final </a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -60,15 +52,10 @@
                         <i class="fas fa-futbol"></i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="https://www.google.com.mx/search?ei=03YwW8bIMY_ysQWW54NA&q=rusia+2018&oq=rusia+2018&gs_l=psy-ab.3..35i39k1l2j0i131i20i263k1j0i131i67k1j0i131k1j0i131i20i263k1j0i131k1j0i3k1j0i131k1j0.10214.10533.0.12786.2.2.0.0.0.0.412.576.0j1j4-1.2.0....0...1c.1.64.psy-ab..0.2.573....0.XOmxrbOmmZI#sie=lg;/m/06qjc4;2;/m/030q7;mt;fp;1">
-                        Goles </a>
-                        <!-- <a class="dropdown-item" href="#"> Another action</a>-->
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">
-                            <i class="fas fa-heartbeat --indigo"></i> Bizcochitos mundialistas
-                            <i class="fas fa-heartbeat"></i>
-                        </a>
-                        <img src="http://www.parisfans.fr/wp-content/uploads/2014/06/Antoine-Griezmann.jpg" width="300" height="200" alt="">
+                        <a class="dropdown-item" href="https://www.google.com.mx/search?ei=03YwW8bIMY_ysQWW54NA&q=rusia+2018&oq=rusia+2018&gs_l=psy-ab.3..35i39k1l2j0i131i20i263k1j0i131i67k1j0i131k1j0i131i20i263k1j0i131k1j0i3k1j0i131k1j0.10214.10533.0.12786.2.2.0.0.0.0.412.576.0j1j4-1.2.0....0...1c.1.64.psy-ab..0.2.573....0.XOmxrbOmmZI#sie=lg;/m/06qjc4;2;/m/030q7;mt;fp;1"> Goles </a>
+                       <!-- <a class="dropdown-item" href="#"> Another action</a>-->
+                    <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#carouselExampleControls"> <i class="fas fa-heartbeat --indigo"></i> Bizcochitos mundialistas <i class="fas fa-heartbeat"></i> </a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -135,17 +122,14 @@
                         </div>
                     </div>
                 </section>
-            </section>
-            <section id="news-gral-users" class="col-sm-8 col-md-10">
-                <div class="row">
-                    <section id="news-users" class="col-sm-12 col-md-6">
-                        <div id="goals" class="col-12"></div>
-                    </section>
-                    <section id="gral-info" class="col-sm-12 col-md-6">
-                        <iframe src="https://calendar.google.com/calendar/embed?showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=400&amp;wkst=1&amp;bgcolor=%23cc66cc&amp;src=tg3dasc1hod7n41i7fe90oq6i4%40group.calendar.google.com&amp;color=%23875509&amp;ctz=America%2FMexico_City"
-                            style="border-width:0" width="550" height="300" frameborder="0" scrolling="no"></iframe>
-                        <div class="container-fluid">
-                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <section id="news-gral-users" class="col-sm-8 col-md-9 d-none">
+                    <div class="row"> 
+                        <section id="news-users" class="col-sm-12 col-md-6 d-none">
+                            <div id="goals" class="col-12"></div>
+                        </section>
+                        <section id="gral-info" class="col-sm-12 col-md-6">
+                            <iframe id="iframe-calendar"src="https://calendar.google.com/calendar/embed?showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=400&amp;wkst=1&amp;bgcolor=%23cc66cc&amp;src=tg3dasc1hod7n41i7fe90oq6i4%40group.calendar.google.com&amp;color=%23875509&amp;ctz=America%2FMexico_City" style="border-width:0" width="550" height="300" frameborder="0" scrolling="no"></iframe>
+                            <div id="carouselExampleControls" class="carousel slide d-none" data-ride="carousel">
                                 <!-- Sección bm's-->
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
@@ -179,7 +163,6 @@
                                         </li>
                                     </ul>
                                 </div>
-
                                 <div class="row-bms">
                                     <button id="btn4">Pique</button>
                                     <ul id="button-4">
@@ -207,19 +190,12 @@
                             </div>
                         </div>
                     </section>
-                </div>
-            </section>
-        </div>
-    </main>
-
-
     <!-- Footer -->
-    <footer class="d-none">
+    <footer class="hide-start">
         <div class="card text-center d-none">
             <div class="card-footer text-muted bg-white">
                 Golazzo
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/golazzo.png" alt="logo golazzo"> </a>
+                <a class="navbar-brand" href="index.html"><img src="assets/images/golazzo.png" alt="logo golazzo"> </a>
             </div>
         </div>
     </footer>
