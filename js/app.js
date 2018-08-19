@@ -133,5 +133,3 @@ $(document).ready(function(){
         $("#li-btn-6").append('<i class="fas fa-heartbeat --indigo"></i>');
     });
 });
-
-       
