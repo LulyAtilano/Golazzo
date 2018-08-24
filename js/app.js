@@ -10,15 +10,6 @@ var config = {
 
 firebase.initializeApp(config);
 
-/*FUNCION SPLASH*/
-$(function(){
-    setTimeout(function() {
-       $('#splash').fadeOut(500);
-    }, 3000);
-    $('.d-none').removeClass("d-none");
-    $('.hide-start').removeClass("hide-start");
-});
-
 /* Log in */
 var provider = new firebase.auth.GoogleAuthProvider();
 

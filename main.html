@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Golazzo </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Css Files -->
+        <link rel="shortcut icon" href="./assets/images/favicon.ico" /> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">-->
+        <link rel="stylesheet" type="text/css" media="screen" href="./css/assets/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+        
+    </head>
+    <body>
+        <!-- Header -->
+        <nav class="navbar navbar-expand-sm navbar-light bg-white hide-start">
+            <a class="navbar-brand" href="main.html"> <img src="./assets/images/golazzo.png" alt="logo golazzo"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto align-items-center">
+                <li class="nav-item active">
+                    <a class="nav-link" href="main.html"> Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Calendario <i class="far fa-calendar-alt"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://www.google.com.mx/search?q=rusia+2018+octavos+de+final&oq=rusia+2018+octav&aqs=chrome.2.69i57j0l5.10236j0j7&sourceid=chrome&ie=UTF-8#sie=lg;/m/06qjc4;2;/m/030q7;mt;fp;1"> Fase regular </a>
+                        <a class="dropdown-item" href="#iframe-calendar"> 8vos de final </a>
+                        <a class="dropdown-item" href="#iframe-calendar"> 4tos de final </a>
+                        <a class="dropdown-item" href="#iframe-calendar"> Semifinal </a>
+                        <a class="dropdown-item" href="#iframe-calendar"> 3er / 4to lugar </a>
+                        <a class="dropdown-item" href="#iframe-calendar"> Final </a>
+                        
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Jugadores <i class="fas fa-futbol"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://www.google.com.mx/search?ei=03YwW8bIMY_ysQWW54NA&q=rusia+2018&oq=rusia+2018&gs_l=psy-ab.3..35i39k1l2j0i131i20i263k1j0i131i67k1j0i131k1j0i131i20i263k1j0i131k1j0i3k1j0i131k1j0.10214.10533.0.12786.2.2.0.0.0.0.412.576.0j1j4-1.2.0....0...1c.1.64.psy-ab..0.2.573....0.XOmxrbOmmZI#sie=lg;/m/06qjc4;2;/m/030q7;mt;fp;1"> Goles </a>
+                       <!-- <a class="dropdown-item" href="#"> Another action</a>-->
+                    <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#carouselExampleControls"> <i class="fas fa-heartbeat --indigo"></i> Bizcochitos mundialistas <i class="fas fa-heartbeat"></i> </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a id="login-btn" class="nav-link" href="#"> Iniciar Sesión</a>
+                </li>
+                <li class="nav-item">
+                    <div class="photo-login"></div>
+                </li>
+                <li class="nav-item">
+                    <a id="logout-btn" class="dropdown-item disabled " href="#"> Salir </a>
+                </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <header class="row-fluid hide-start">
+            <div id="banner"></div>
+        </header>
+        <!-- Main -->
+        <main class="hide-start"> 
+            <div class="row"> 
+                <section id="profile-user" class="border-primary col-sm-10 col-lg-3">
+                    <div class="card-body text-primary text-center">
+                        <div class="photo-login"></div>
+                        <h5 id="user-name" class="card-title"></h5>
+                    </div>
+                    <!-- Input para subir archivos -->
+                    <div class="input-group mb-3">
+                        <span class="col-sm-12 text-center"> ¡Nomina a tu bm! <i class="fas fa-heartbeat --indigo"></i> </span>
+                        <div class="input-group-prepend">
+                            <button id="bm-btn"class="btn btn-outline-secondary" type="button"> <i class="fas fa-upload"></i> </button>
+                        </div>
+                        <div class="custom-file">
+                            <input id="input-bm-File" type="file" value="upload" class="custom-file-input" accept="image/x-png,image/gif,image/jpg">
+                            <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="col-sm-12 text-center"> ¡Comparte lo mejor del mundial! </span>
+                        <div class="input-group-prepend">
+                            <button id="upload-btn"class="btn btn-outline-secondary" type="button"> <i class="fas fa-upload"></i> </button>
+                        </div>
+                        <div class="custom-file">
+                            <input id="input-Upload-File" type="file" value="upload" class="custom-file-input" accept="image/x-png,image/gif,image/jpg">
+                            <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
+                        </div>
+                    </div>
+                    <!--tarjeta para los comentarios--> 
+                    <section class="texto text-center">
+                        <div class="card w-100">
+                            <div class="card-body">
+                                <h4 class="card-title">Baja el balón</h4>
+                                <textarea id="textArea" name="Text card-text" rows="2" class="validate" placeholder="Mándanos un pase!"></textarea>
+                                <a id="commit" href="#!" class="btn btn-primary">Gol!</a>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <!-- Sección News -->
+                <section id="news-gral-users" class="col-sm-10 col-md-9">
+                    <div class="row"> 
+                        <!-- Sección de golazzos comunitarios --> 
+                        <section id="news-users" class="col-sm-10 col-md-6">
+                            <h3 class="text-center dark-purple"> ~ Golazzos comunitarios ~ </h3>
+                            <div id="goals" class="col-10"></div>
+                        </section>
+            
+                        <section id="gral-info" class="col-sm-10 col-md-6">
+                            <!-- API Google Calendar -->
+                            <iframe id="iframe-calendar"src="https://calendar.google.com/calendar/embed?showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=400&amp;wkst=1&amp;bgcolor=%23cc66cc&amp;src=tg3dasc1hod7n41i7fe90oq6i4%40group.calendar.google.com&amp;color=%23875509&amp;ctz=America%2FMexico_City" style="border-width:0" width="550" height="300" frameborder="0" scrolling="no"></iframe>
+                            <!-- Sección bm's-->
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div id="img-carousel" class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="./assets/images/Griezmann-fra.jpg" alt="Antoine Griezmann">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="./assets/images/pique-esp.jpg" alt="Gerard Pique">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="./assets/images/Layun-mex.jpg" alt="Miguel Layun">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="./assets/images/suarez-Uru.jpeg" alt="Luis Suarez">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                            <!-- Ranking de bm's -->
+                            <div id="ranking-container" class="container">
+                                <h5 class="text-center dark-purple"> ~ Vota por tu bizcocho mundialista ~ </h5>
+                                <div class="row-bms col-sm-12">
+                                    <ul id="button-3">
+                                        <button id="btn3"> Griezmann </button>
+                                        <li id="li-btn-3"></li>
+                                    </ul>
+                                 </div>
+                                 <div class="row-bms col-sm-12">
+                                    <ul id="button-4">
+                                        <button id="btn4"> Pique </button>
+                                        <li id="li-btn-4"></li>
+                                    </ul>
+                                </div>
+                                <div class="row-bms col-sm-12">
+                                    <ul id="button-5">
+                                        <button id="btn5"> Layun </button>
+                                        <li id="li-btn-5"></li>
+                                    </ul>
+                                </div>
+                                <div class="row-bms col-sm-12">
+                                    <ul id="button-6">
+                                        <button id="btn6"> Suarez </button>
+                                        <li id="li-btn-6"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div> 
+        </main>
+        
+
+        <!-- Footer -->
+        <footer class="hide-start"> 
+            <div class="text-center">
+                <div class="card-footer text-muted bg-white">
+                    Golazzo
+                    <a class="navbar-brand" href="main.html"> <img src="./assets/images/golazzo.png" alt="logo golazzo"> </a>
+                </div>
+            </div>
+        </footer>
+        
+
+        <!-- Js Files -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+        <script src="./js/assets/bootstrap.min.js"></script>
+        <script src="./js/app.js"></script>
+    </body>
+</html>
