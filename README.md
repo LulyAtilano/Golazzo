@@ -22,6 +22,8 @@ Finalmente en la sección de Calentandario, apareceren cuando fueron celebrados 
 * HTML5
 * API de Google Calendar
 
+----
+
 ### Vista Desktop:
 ![screenshoot-Desktop](./assets/images/golazzo-viewDesktop.png)
 

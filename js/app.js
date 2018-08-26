@@ -27,6 +27,14 @@ $('#login-btn').click(function () {
     });
 });
 
+/* Hacer el logout de Firebase */
+$('#logut-btn').click(function(){
+    firebase.auth().signOut();
+    $('#login-btn').show();
+    $('#logout-btn').addClass("disabled");
+    $('#profile-user').addClass("disabled");
+});
+
 var userInfo = {};
 
 /* Función para guardar la info de los usuarios */
