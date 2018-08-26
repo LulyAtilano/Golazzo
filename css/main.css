@@ -21,22 +21,12 @@ body {
 .ligth-gray {background-color: #666666; }
 
 /* Splash */
-/*splash {
-    height: 100vh;
-    width: 100%;
-    padding: auto;
-}*/
-
 #golazzo-splash {
     height: 50%;
     width: 50%;
-    padding-top: 8%;
+    padding-top: 5%;
     padding-left: 30%;
 }
-
-/*.hide-start {
-    display: none;
-}*/
 
 /* Navbar */
 nav.navbar, .card-footer {
@@ -66,7 +56,7 @@ i.far, i.fas, #user-name  {
 
 /* Main */
 main div.row {
-    margin: 1.5em 0 0 0;
+    margin: 1.1em 0 0 0;
 }
 
 #profile-user, #news-gral-users {
@@ -76,7 +66,7 @@ main div.row {
 }
 
 #news-users, #gral-info {
-    min-height: 10em;
+    min-height: 14em;
     margin: 0;
     padding: 2em auto;
 }
@@ -87,7 +77,7 @@ main div.row {
 }
 
 #gral-info {
-    margin-bottom: 45px;
+    margin-bottom: 60px;
 }
 
 #profile-user {
@@ -112,7 +102,7 @@ main div.row section#profile-user div.card-body div.photo-login > img {
 #news-gral-users div.row section#gral-info iframe {
     width: 90%;
     padding-left: 8.99%;
-    margin-bottom: 1.2em;
+    margin-bottom: .9em;
 }
 
 #news-gral-users div.row section#gral-info div#carouselExampleControls {
@@ -173,6 +163,7 @@ footer div div.card-footer a.navbar-brand > img {
 
 div#goals {
     padding: 0;
+    margin: 0 auto;
 }
 
 /* Comentarios al blog */
@@ -181,8 +172,8 @@ div#goals {
     margin-top: .5em;
 }
 
-#goals {
-    margin: 0 auto;
+#news-gral-users div.row {
+    margin: 0;
 }
 
 #news-gral-users div #news-users #goals section div div div#comment-user {
@@ -190,9 +181,22 @@ div#goals {
     width: 100%;
 }
 
-#news-gral-users div #news-users #goals section div div > img {
-    height: 3em;
+#news-gral-users div #news-users #goals section div.card.w-100 {
+    box-sizing: border-box;
+    height: 215px;
+}
+
+#news-gral-users div #news-users #goals section div div > img:first-child {
     border-radius: 40%;
+    height: 3em;
+    top: 50px;
+    position: relative;
+    margin-right: 5px;
+}
+
+#news-gral-users div #news-users #goals section div div > img:last-child {
+    width: 250px;
+    border-radius: 5px;
 }
 
 /* Ranking */

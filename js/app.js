@@ -49,16 +49,29 @@ $('#input-Upload-File').change(function (e) {
 
     /* Se refleja el archivo guardado de Firebase a la sección goals */
     storageRef.getDownloadURL().then(function(url){
-        $('#goals').append('<section class="texto text-center img-user-share">' +
-                    '<div class="card w-100">' +
-                        '<div class="card-body" style="padding-top:5px;padding-bottom:5px;">' +
-                            '<img style="width:150px; height: 150px;" src="'+ url +'" width: 150px;/>'+
-                        '</div>'+
-                    '</div>'+
-                '</section>');
-    //('<div>'+'<img src="'+ url+'"/>'+'</div>');
+        addImage(url);
     });
 });
+
+var templateImage = '<section class="texto text-center">' +
+                    '<div class="card w-100">' +
+                        '<div class="card-body">' +
+                            '<h5 class="float-left"> _UserName_</h5>' +
+                            '<div id="comment-user">'+
+                                '<img src="_Photo-User__"/>'+'<img style="width:250px; height: 150px;" src="__Ur__" width: 150px;/>' +
+                            '</div>'+
+                        '</div>'+
+                    '</div>'+
+                '</section>';
+
+function addImage(url) {
+    var finalTemplate = "";
+    //console.log(userInfo.name);
+    finalTemplate = templateImage.replace(" _UserName_",userInfo.name + " dice: ")
+    .replace("_Photo-User__", userInfo.photo)
+    .replace("__Ur__", url)
+    $("#goals").append(finalTemplate);
+};
 
 /* Subir bm's */
 $('#input-bm-File').change(function (e) {
@@ -69,7 +82,7 @@ $('#input-bm-File').change(function (e) {
     /* Se refleja el archivo guardado de Firebase a la sección de carrusel */
     storageRef.getDownloadURL().then(function(url){
         $('#img-carousel').append('<div class="carousel-item">'+
-            '<img style="width:100%; height: 243px;" class="d-block w-100" src="'+ url +'"/>'+
+            '<img style="width:100%; height: 243px;" class="d-block w-100 center" src="'+ url +'"/>'+
           '</div>');
         //'<img src="'+ url+'"/>'
     });
