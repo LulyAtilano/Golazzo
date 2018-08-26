@@ -183,19 +183,20 @@ div#goals {
 
 #news-gral-users div #news-users #goals section div.card.w-100 {
     box-sizing: border-box;
-    height: 215px;
+    max-height: 215px;
+    height: auto;
 }
 
 #news-gral-users div #news-users #goals section div div > img:first-child {
     border-radius: 40%;
     height: 3em;
-    top: 50px;
     position: relative;
     margin-right: 5px;
 }
 
 #news-gral-users div #news-users #goals section div div > img:last-child {
-    width: 250px;
+    max-width: 300px;
+    width: 170px;
     border-radius: 5px;
 }
 
