@@ -23,10 +23,10 @@ Finalmente en la sección de Calentandario, apareceren cuando fueron celebrados 
 * API de Google Calendar
 
 ### Vista Desktop:
-![](./assets/images/golazzo-viewDesktop.png)
+![screenshoot-Desktop](./assets/images/golazzo-viewDesktop.png)
 
 ### Vista Mobile:
-![](./assets/images/golazzo-viewMobile.png)
+![screenshoot-Mobile](./assets/images/golazzo-viewMobile.png)
 
 ---
 ## Autoras
