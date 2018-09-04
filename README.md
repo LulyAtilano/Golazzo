@@ -25,10 +25,10 @@ Finalmente en la sección de Calentandario, apareceren cuando fueron celebrados 
 ----
 
 ### Vista Desktop:
-![screenshoot-Desktop](./assets/images/golazzo-viewDesktop.png)
+![screenshoot-Desktop](https://user-images.githubusercontent.com/37431988/45055913-e75b5a80-b056-11e8-8ae7-40a3e0aa7fbe.png)
 
 ### Vista Mobile:
-![screenshoot-Mobile](./assets/images/golazzo-viewMobile.png)
+![screenshoot-Mobile](https://user-images.githubusercontent.com/37431988/45055994-2f7a7d00-b057-11e8-914b-6aaab1a4d8de.png)
 
 ---
 ## Autoras
